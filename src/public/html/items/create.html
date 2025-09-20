@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品の出品</title>
+    <link rel="stylesheet" href="../../css/app.common.css">
+    <link rel="stylesheet" href="../../css/items/create.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="../../img/logo.svg" alt="COACHTECH" width="350">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="なにをお探しですか？">
+            </div>
+            <div class="nav-links">
+                <a href="/login">ログイン</a>
+                <a href="/register">マイページ</a>
+                <a href="/sell">出品</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="create">
+            <div class="create__title">
+                <h2>商品の出品</h2>
+            </div>
+
+            <form class="create__form" action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <h3 class="form-group__label">商品画像</h3>
+                    <div class="form-group__file">
+                        <label for="img" class="file-label">
+                            画像を選択する
+                            <input type="file" name="img" id="img" accept="image/*" hidden>
+                        </label>
+                    </div>          
+                </div>
+
+                <div class="form-detail">
+                    <h3 class="form-section__heading">商品の詳細</h3>
+                    <div class="form-group">
+                        <h3>カテゴリー</h3>
+                        <div class="form-category">
+                            <input type="radio" id="cat1" name="category" value="1" hidden>
+                            <label for="cat1" class="category-label">ファッション</label>
+                        
+                            <input type="radio" id="cat2" name="category" value="2" hidden>
+                            <label for="cat2" class="category-label">家電</label>
+                        
+                            <input type="radio" id="cat3" name="category" value="3" hidden>
+                            <label for="cat3" class="category-label">インテリア</label>
+                        
+                            <input type="radio" id="cat4" name="category" value="4" hidden>
+                            <label for="cat4" class="category-label">レディース</label>
+                        
+                            <input type="radio" id="cat5" name="category" value="5" hidden>
+                            <label for="cat5" class="category-label">メンズ</label>
+                        
+                            <input type="radio" id="cat6" name="category" value="6" hidden>
+                            <label for="cat6" class="category-label">コスメ</label>
+                        
+                            <input type="radio" id="cat7" name="category" value="7" hidden>
+                            <label for="cat7" class="category-label">本</label>
+                        
+                            <input type="radio" id="cat8" name="category" value="8" hidden>
+                            <label for="cat8" class="category-label">ゲーム</label>
+                        
+                            <input type="radio" id="cat9" name="category" value="9" hidden>
+                            <label for="cat9" class="category-label">スポーツ</label>
+                        
+                            <input type="radio" id="cat10" name="category" value="10" hidden>
+                            <label for="cat10" class="category-label">キッチン</label>
+                        
+                            <input type="radio" id="cat11" name="category" value="11" hidden>
+                            <label for="cat11" class="category-label">ハンドメイド</label>
+                        
+                            <input type="radio" id="cat12" name="category" value="12" hidden>
+                            <label for="cat12" class="category-label">アクセサリー</label>
+                        
+                            <input type="radio" id="cat13" name="category" value="13" hidden>
+                            <label for="cat13" class="category-label">おもちゃ</label>
+                        
+                            <input type="radio" id="cat14" name="category" value="14" hidden>
+                            <label for="cat14" class="category-label">ベビー・キッズ</label>              
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group__label" for="condition">商品の状態</label>
+                        <select name="condition" id="condition" class="form-group__select">
+                            <option value="" selected disabled hidden>選択してください</option>
+                            <option value="1">良好</option>
+                            <option value="2">目立った傷や汚れなし</option>
+                            <option value="3">やや傷や汚れあり</option>
+                            <option value="4">状態が悪い</option>
+                        </select>
+                    </div>
+                    </div>
+
+                <div class="form-title">
+                    <h3 class="form-section__heading">商品名と説明</h3>
+                    <div class="form-group">
+                        <label class="form-group__label" for="name">商品名</label>
+                        <input class="form-group__input" type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group__label" for="brand">ブランド名</label>
+                        <input class="form-group__input" type="text" id="brand" name="brand">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="detail">商品の説明</label>
+                        <textarea id="detail" name="detail" rows="6" class="form-group__textarea"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="price">販売価格</label>
+                        <div class="form-group__price-wrapper">
+                            <span class="form-group__yen">¥</span>
+                            <input class="form-group__input" type="text" id="price" name="price">          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="create__button" type="submit">出品する</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

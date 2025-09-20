@@ -1,0 +1,178 @@
+/* ===== 共通設定 ===== */
+body {
+    max-width: 1500px;
+    margin: 0;
+    padding: 0;
+}
+
+.create {
+    margin: 0 auto;
+    width: 50%;
+    height: 1000px;
+}
+
+.create__title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== フォーム構造 ===== */
+.create__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section__heading {
+    color: #5f5f5f;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5f5f5f;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.form-group__label {
+    font-size: 25px;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+}
+
+/* ===== 入力フィールド共通 ===== */
+.form-group__input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ===== 商品画像アップロード ===== */
+.form-group__file {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted #000;
+    width: 100%;
+    height: 130px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.file-label {
+    color: #ff5555;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 1px solid #ff5555;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.file-label:hover {
+    background-color: #e04b4b;
+    color: white;
+}
+
+.form-group__file input[type="file"]::file-selector-button:hover {
+    background-color: #e04b4b;
+}
+
+/* ===== セレクトボックス（商品の状態） ===== */
+.form-group__select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="gray" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #fff;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group__select:hover {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== カテゴリ（ラジオボタン風） ===== */
+.form-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-label {
+    padding: 5px 15px;
+    border: 2px solid #ff5555;
+    border-radius: 20px;
+    color: #ff5555;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+/* チェックボックス選択時のカテゴリスタイル */
+input[type="checkbox"]:checked+.category-label {
+    background-color: #ff5555;
+    color: white;
+}
+
+/* ===== 金額入力（¥マーク付き） ===== */
+.form-group__price-wrapper {
+    position: relative;
+}
+
+.form-group__yen {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    /* 和文でも崩れにくい */
+    pointer-events: none;
+    /* クリック無効化 */
+}
+
+.form-group__price-wrapper input {
+    padding-left: 30px;
+}
+
+/* ===== ボタン ===== */
+.create__button {
+    margin-top: 80px;
+    background-color: #ff5555;
+    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.create__button:hover {
+    background-color: #e04b4b;
+}
+
+.error-message {
+    color: red;
+    font-size: 20px;
+    margin-top: 10px;
+}
+

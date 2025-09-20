@@ -1,0 +1,224 @@
+.content {
+    display: flex;
+    max-width: 1500px;
+}
+/* 全体レイアウト */
+.item-confirm {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 商品情報 */
+.item-detail {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black ;
+
+}
+
+.item-detail__image {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-detail__image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.item-detail__info {
+    vertical-align: top;
+}
+
+.item-title {
+    font-size: 30px;
+    /* margin-bottom: 2px; */
+}
+
+.item-price {
+    font-size: 30px;
+    padding-top: 0;
+    color: #444;
+}
+
+
+/* 支払い方法 */
+.payment-method__title h3,
+.shipping-address__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.payment-method__select { 
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 100px;
+    margin-bottom: 40px
+}
+
+.payment-method__select select {
+    appearance: none;
+    width: 300px;
+    padding: 2px;
+    padding-right: 1em;
+    border: none;
+    outline: 0;
+    background: #fff;
+    background-image: none;
+    box-shadow: none;
+    text-indent: 0.01px;
+    text-overflow: ellipsis; 
+    font-size: 20px;
+    cursor: pointer;
+}
+.payment-method__select::before {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-width: 10px 5px 0 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    content: "";
+    pointer-events: none;
+}
+
+/* 配送先 */
+.shipping-address {
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.shipping-address__title--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipping-address__change a {
+    font-size: 30px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.shipping-address__content {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding-left: 100px;
+    padding-bottom: 40px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.6;
+    border-bottom: 1px solid black;
+}
+
+.item-purchase__box {
+    width: 30%;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 正しいクラス名に修正！ */
+.item-purchase__confirm table {
+    width: 100%;
+    height: 200px;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+.item-purchase__confirm tr {
+    border: 1px solid #000;
+}
+
+.item-purchase__confirm th {
+    border-right: none;
+}
+
+.item-purchase__confirm td {
+    border-left: none;
+}
+
+.table-title,
+.table-price {
+    padding: 20px 10px;
+    font-size: 25px;
+    font-weight: normal;
+    border: 1px solid #000;
+}
+
+.table-price {
+    text-align: center;
+}
+
+/* 購入ボタン */
+.item-purchase__button button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.item-purchase__button button:hover {
+    background-color: #e74c3c;
+}
+
+.error-message {
+    color: red;
+    font-size: 20px;
+}
+
+@media(max-width: 900px) {
+    .item-confirm {
+        width: 90%;
+    }
+
+    .item-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-detail__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .item-purchase__box {
+        width: 100%;
+    }
+
+    .payment-method__select select {
+        width: 100%;
+    }
+    
+    .shipping-address__change a {
+        font-size: 20px;   }
+    
+
+}

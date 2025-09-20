@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flea market</title>
+    <link rel="stylesheet" href="../../css/app.common.css">
+    <link rel="stylesheet" href="../../css/purchase/address.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="../../img/logo.svg" alt="COACHTECH" width="350">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="なにをお探しですか？">
+            </div>
+            <div class="nav-links">
+                <a href="/login">ログイン</a>
+                <a href="/register">マイページ</a>
+                <a href="/sell">出品</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="address-change">
+            <div class="address-change__title">
+                <h2>住所の変更</h2>
+            </div>
+            <form class="address-change__form" action="#">
+                <div class="form-group">
+                    <label class="form-group__label" for="post_code">郵便番号</label>
+                    <input class="form-group__input" type="text" id="post_code" name="post_code">
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="address">住所</label>
+                    <input class="form-group__input" type="text" id="address" name="address">
+                </div>
+                <div class="form-group">
+                    <label class="form-group__label" for="building_name">建物名</label>
+                    <input class="form-group__input" type="building_name" id="building_name" name="building_name">
+                </div>
+                <button class="update__button" type="submit">更新する</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

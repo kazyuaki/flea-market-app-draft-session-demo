@@ -1,0 +1,39 @@
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    height: 70px;
+}
+
+.header__inner {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .header__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header__logo {
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 0;
+        text-align: left;
+        position: relative;
+    }
+}

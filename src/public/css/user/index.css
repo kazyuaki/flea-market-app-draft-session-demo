@@ -1,0 +1,228 @@
+.mypage__content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-info-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.user__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info h2 {
+    font-size: 30px;
+    margin: 0 0 6px;
+}
+
+.user-rating {
+    display: flex;
+    gap: 6px;
+}
+
+.star-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.profile__button-submit {
+    border: 1px solid #ff5555;
+    background-color: #fff;
+    color: #ff5555;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.nav a {
+    margin-left: 30px;
+    color: #5f5f5f;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav a.active {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.item {
+    width: auto;
+    min-width: 0;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.item-name {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+/* 一覧はグリッドで均等配置 */
+.transaction-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+/* カード＝正方形ボックス */
+.transaction-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    aspect-ratio: 1 / 1;
+    /* ←ココがポイント */
+    position: relative;
+}
+
+.transaction-thumb-wrap {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f3f3f3;
+    flex: 0 0 auto;
+}
+
+.transaction-card img.transaction-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* テキスト領域は残りを使う */
+.transaction-meta {
+    flex: 1 1 auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.transaction-item-name {
+    font-weight: 600;
+}
+
+.transaction-partner {
+    font-size: 13px;
+    color: #666;
+}
+
+.transaction-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.transaction-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: grid;
+    place-items: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 1px 1px;
+    background: #ef4444;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.badge {
+    background-color: #ff5555;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* --- レスポンシブ --- */
+/* 2) PC 1400–1540px：4列固定 */
+@media (min-width:1400px) and (max-width:1540px) {
+    .item-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .transaction-list {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+    
+    }
+}
+
+/* 3) タブレット 768–850px：3列固定 */
+@media (min-width:768px) and (max-width:850px) {
+    .item-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .item {
+        width: auto;
+    }
+
+   .transaction-list {
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+   }
+}
+
+/* 4)（任意）スマホ〜767px：2列 or 1列にしたい場合はどちらか */
+@media (max-width:767px) {
+    .item-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .transaction-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
